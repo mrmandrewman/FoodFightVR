@@ -19,7 +19,6 @@ public class ActorProjectile : MonoBehaviour
 		{
 			b_activeProjectile = false;
 			gameObject.tag = "Food";
-			gameObject.layer = 0;
 		}
 	}
 
@@ -31,6 +30,8 @@ public class ActorProjectile : MonoBehaviour
 
 	public void SetAsEnemyProjectile()
 	{
+
+		gameObject.layer = 0;
 		StartCoroutine("LifeSpan");
 		if (thisRigidbody.velocity.magnitude >= activeProjectileSpeed)
 		{
