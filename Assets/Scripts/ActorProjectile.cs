@@ -19,6 +19,7 @@ public class ActorProjectile : MonoBehaviour
 		{
 			b_activeProjectile = false;
 			gameObject.tag = "Food";
+			gameObject.layer = 0;
 		}
 	}
 
@@ -57,6 +58,7 @@ public class ActorProjectile : MonoBehaviour
 		if (thisRigidbody.velocity.magnitude >= activeProjectileSpeed)
 		{
 			gameObject.tag = "PlayerProjectile";
+			gameObject.layer = 8; // Player layer, stops the apple from colliding with tha player
 			b_activeProjectile = true;
 		}
 	}
