@@ -6,6 +6,9 @@ public class ActorProjectile : MonoBehaviour
 {
 	[SerializeField]
 	private Rigidbody thisRigidbody = null;
+	[SerializeField]
+	private float throwPowerMultiplier = 1.5f;
+
 	[SerializeField, Tooltip("How fast the object needs to be thrown to count as a projectile"), Range(0, 10)]
 	private float activeProjectileSpeed = 2.0f;
 	[SerializeField, Tooltip("How long the object will stay active after pick up")]
@@ -30,8 +33,7 @@ public class ActorProjectile : MonoBehaviour
 
 	public void SetAsEnemyProjectile()
 	{
-
-		gameObject.layer = 0;
+		//gameObject.layer = 0;
 		StartCoroutine("LifeSpan");
 		if (thisRigidbody.velocity.magnitude >= activeProjectileSpeed)
 		{
@@ -56,6 +58,7 @@ public class ActorProjectile : MonoBehaviour
 	IEnumerator CheckVelocity()
 	{
 		yield return new WaitForEndOfFrame();
+		thisRigidbody.velocity *= throwPowerMultiplier;
 		if (thisRigidbody.velocity.magnitude >= activeProjectileSpeed)
 		{
 			gameObject.tag = "PlayerProjectile";
