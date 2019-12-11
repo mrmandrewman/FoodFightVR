@@ -33,8 +33,7 @@ public class ActorProjectile : MonoBehaviour
 
 	public void SetAsEnemyProjectile()
 	{
-
-		gameObject.layer = 0;
+		//gameObject.layer = 0;
 		StartCoroutine("LifeSpan");
 		if (thisRigidbody.velocity.magnitude >= activeProjectileSpeed)
 		{
