@@ -9,8 +9,8 @@ public class ActorEnemy : MonoBehaviour
 	[SerializeField]
 	private float respawnTime = 5.0f;
 	private Coroutine respawning = null;
-	//[SerializeField]
-	//private float scoreValue = 20;
+	[SerializeField]
+	private int scoreValue = 200;
 
 	[SerializeField]
 	private Transform playerTransform = null;
@@ -46,7 +46,7 @@ public class ActorEnemy : MonoBehaviour
 		if (collision.gameObject.CompareTag("PlayerProjectile") && respawning == null)
 		{
 			// Apply Points
-
+			ActorLevelManager.instance.AddPoints(scoreValue);
 
 			// Handle animations
 			hitAnimation.SetTrigger("Hit");

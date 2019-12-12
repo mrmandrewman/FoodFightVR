@@ -75,5 +75,10 @@ public class ActorProjectile : MonoBehaviour
 			// play particle effect 
 			// play impact sound
 		}
+
+		if (CompareTag("EnemyProjectile") && collision.gameObject.CompareTag("Player"))
+		{
+			ActorLevelManager.instance.ChangeHealth(-1);
+		}
 	}
 }
