@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisRigidbody: {fileID: 3318523497346988043}
-  throwPowerMultiplier: 1.2
+  throwPowerMultiplier: 1.4
   activeProjectileSpeed: 0.01
   timeToLive: 5
 --- !u!114 &7287191123969826330

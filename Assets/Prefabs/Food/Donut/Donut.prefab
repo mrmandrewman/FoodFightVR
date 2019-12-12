@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 118342948564878118}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4775677644295254425}
   m_Father: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisRigidbody: {fileID: 3318523497346988043}
-  throwPowerMultiplier: 1.2
+  throwPowerMultiplier: 1.4
   activeProjectileSpeed: 0.01
   timeToLive: 5
 --- !u!114 &7287191123969826330
@@ -243,7 +243,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.07, z: 0.16}
+  m_Size: {x: 0.17, y: 0.06, z: 0.17}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1894125508514875996
 GameObject:
