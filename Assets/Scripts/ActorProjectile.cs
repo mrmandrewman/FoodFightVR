@@ -14,6 +14,9 @@ public class ActorProjectile : MonoBehaviour
 	[SerializeField, Tooltip("How long the object will stay active after pick up")]
 	private float timeToLive = 5.0f;
 
+	[SerializeField]
+	private GameObject splatterParticle = null;
+
 	private bool b_activeProjectile = false;
 
 	private void Update()
@@ -71,9 +74,10 @@ public class ActorProjectile : MonoBehaviour
 	{
 		if (b_activeProjectile)
 		{
+			Quaternion targetSplatterRotation = Quaternion.LookRotation(transform.position - ActorLevelManager.instance.GetPlayerObject().transform.position);
+			Instantiate(splatterParticle, transform.position, targetSplatterRotation);
+			Destroy(gameObject);
 			// deactivate mesh renderer
-			// play particle effect 
-			// play impact sound
 		}
 
 		if (CompareTag("EnemyProjectile") && collision.gameObject.CompareTag("Player"))

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ActorLevelManager : MonoBehaviour
 {
-	public static ActorLevelManager instance = null;
 
 	private static int currentScore = 0;
 	[SerializeField]
@@ -15,6 +14,11 @@ public class ActorLevelManager : MonoBehaviour
 	[SerializeField]
 	private ActorHealthDisplay healthDisplay = null;
 
+	[SerializeField]
+	private static GameObject playerGameObject = null;
+
+
+	public static ActorLevelManager instance = null;
 	// Start is called before the first frame update
 	private void Start()
 	{
@@ -28,6 +32,11 @@ public class ActorLevelManager : MonoBehaviour
 		}
 
 		DontDestroyOnLoad(gameObject);
+	}
+
+	public GameObject GetPlayerObject()
+	{
+		return playerGameObject;
 	}
 
 	public void AddPoints(int _points)
