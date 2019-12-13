@@ -20,13 +20,13 @@ public class ActorHealthDisplay : MonoBehaviour
 
 	[Header("Heart Textures")]
 	[SerializeField]
-	private Sprite heartImageFull;
+	private Sprite heartImageFull = null;
 	
 	[SerializeField]
-	private Sprite heartImagePartial;
+	private Sprite heartImagePartial = null;
 
 	[SerializeField]
-	private Sprite heartImageEmpty;
+	private Sprite heartImageEmpty = null;
 
 
 	public void DisplayHealth()
