@@ -15,7 +15,7 @@ public class ActorLevelManager : MonoBehaviour
 	private ActorHealthDisplay healthDisplay = null;
 
 	[SerializeField]
-	private static GameObject playerGameObject = null;
+	private GameObject playerGameObject = null;
 
 
 	public static ActorLevelManager instance = null;

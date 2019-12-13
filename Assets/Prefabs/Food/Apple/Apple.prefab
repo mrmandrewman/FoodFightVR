@@ -203,7 +203,8 @@ MonoBehaviour:
   throwPowerMultiplier: 1.4
   activeProjectileSpeed: 0.01
   timeToLive: 5
-  splatterParticle: {fileID: 0}
+  splatterParticle: {fileID: 40955795378556304, guid: bd227adf8dc30aa48b69381579752c34,
+    type: 3}
 --- !u!135 &-8536756128744332103
 SphereCollider:
   m_ObjectHideFlags: 0

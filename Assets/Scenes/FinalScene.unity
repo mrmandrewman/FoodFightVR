@@ -2133,6 +2133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreDisplay: {fileID: 1665883652}
   healthDisplay: {fileID: 500237637}
+  playerGameObject: {fileID: 2044993788}
 --- !u!1001 &235970797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24929,6 +24930,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040665497}
   m_Mesh: {fileID: -587340726572068259, guid: 2520064f40a3a4ceaa0954616bd2ebb2, type: 3}
+--- !u!1 &2044993788 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3202447489542747495, guid: a5ea48f1b484b6444878b1a631886a67,
+    type: 3}
+  m_PrefabInstance: {fileID: 3202447490234794107}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2045482572
 GameObject:
   m_ObjectHideFlags: 0
